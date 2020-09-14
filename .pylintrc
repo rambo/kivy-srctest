@@ -1,0 +1,7 @@
+; NOTE: Make sure that this file and pyproject.toml stay in sync
+; After pylint 2.5 is released, get rid of this file
+[FORMAT]
+max-line-length=120
+
+[MESSAGES CONTROL]
+disable=fixme,W1202,C0330
