@@ -6,6 +6,7 @@ authors = ["Eero af Heurlin <eero.afheurlin@advian.fi>"]
 
 [tool.poetry.scripts]
 kivysrctest = "srctest.console:srctest_cli"
+kivysrctestasync = "srctest.console:srctest_async_cli"
 
 
 [tool.black]
