@@ -93,6 +93,24 @@ d = ["aiohttp (>=3.3.2)", "aiohttp-cors"]
 
 [[package]]
 category = "dev"
+description = "Generic Python packager for Android / iOS and Desktop"
+name = "buildozer"
+optional = false
+python-versions = "*"
+version = "1.2.0.dev0"
+
+[package.dependencies]
+pexpect = "*"
+sh = "*"
+virtualenv = "*"
+
+[package.source]
+reference = "7b35b3d03063414a95ccb24a99e07e09564b9943"
+type = "git"
+url = "https://github.com/kivy/buildozer.git"
+
+[[package]]
+category = "dev"
 description = "Version-bump your software with a single command!"
 name = "bump2version"
 optional = false
@@ -147,6 +165,14 @@ name = "coverage"
 optional = false
 python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*, <4"
 version = "4.5.4"
+
+[[package]]
+category = "main"
+description = "The Cython compiler for writing C extensions for the Python language."
+name = "cython"
+optional = false
+python-versions = ">=2.6, !=3.0.*, !=3.1.*, !=3.2.*"
+version = "0.29.10"
 
 [[package]]
 category = "dev"
@@ -342,6 +368,17 @@ python-versions = ">=2.6"
 version = "5.5.0"
 
 [[package]]
+category = "dev"
+description = "Pexpect allows easy control of interactive console applications."
+name = "pexpect"
+optional = false
+python-versions = "*"
+version = "4.8.0"
+
+[package.dependencies]
+ptyprocess = ">=0.5"
+
+[[package]]
 category = "main"
 description = "Python Imaging Library (Fork)"
 name = "pillow"
@@ -386,6 +423,14 @@ virtualenv = ">=15.2"
 [package.dependencies.importlib-metadata]
 python = "<3.8"
 version = "*"
+
+[[package]]
+category = "dev"
+description = "Run a subprocess in a pseudo terminal"
+name = "ptyprocess"
+optional = false
+python-versions = "*"
+version = "0.6.0"
 
 [[package]]
 category = "dev"
@@ -509,6 +554,14 @@ socks = ["PySocks (>=1.5.6,<1.5.7 || >1.5.7)", "win-inet-pton"]
 
 [[package]]
 category = "dev"
+description = "Python subprocess replacement"
+name = "sh"
+optional = false
+python-versions = "*"
+version = "1.14.0"
+
+[[package]]
+category = "dev"
 description = "Python 2 and 3 compatibility utilities"
 name = "six"
 optional = false
@@ -619,7 +672,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "f31b4c0691aef1bca3e3bac12d4cd33a81258f541d1494fefbb0d6c1cd802f18"
+content-hash = "572146815415d475e5f50926a841c90b990e1f05e2495bbb4c3b55c40da58f99"
 python-versions = "^3.7"
 
 [metadata.files]
@@ -651,6 +704,7 @@ black = [
     {file = "black-19.10b0-py36-none-any.whl", hash = "sha256:1b30e59be925fafc1ee4565e5e08abef6b03fe455102883820fe5ee2e4734e0b"},
     {file = "black-19.10b0.tar.gz", hash = "sha256:c2edb73a08e9e0e6f65a0e6af18b059b8b1cdd5bef997d7a0b181df93dc81539"},
 ]
+buildozer = []
 bump2version = [
     {file = "bump2version-0.5.11-py2.py3-none-any.whl", hash = "sha256:bfcc051498dda9fd9ac8634689f4516e1c20fdeeace3278932cc6e1248418b36"},
     {file = "bump2version-0.5.11.tar.gz", hash = "sha256:524bde030318fe2543038defe0f77739605636fef96924883813cb290cf79c1e"},
@@ -708,6 +762,36 @@ coverage = [
     {file = "coverage-4.5.4-cp37-cp37m-win_amd64.whl", hash = "sha256:23cc09ed395b03424d1ae30dcc292615c1372bfba7141eb85e11e50efaa6b351"},
     {file = "coverage-4.5.4-cp38-cp38-macosx_10_13_x86_64.whl", hash = "sha256:141f08ed3c4b1847015e2cd62ec06d35e67a3ac185c26f7635f4406b90afa9c5"},
     {file = "coverage-4.5.4.tar.gz", hash = "sha256:e07d9f1a23e9e93ab5c62902833bf3e4b1f65502927379148b6622686223125c"},
+]
+cython = [
+    {file = "Cython-0.29.10-cp27-cp27m-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl", hash = "sha256:c81aea93d526ccf6bc0b842c91216ee9867cd8792f6725a00f19c8b5837e1715"},
+    {file = "Cython-0.29.10-cp27-cp27m-manylinux1_i686.whl", hash = "sha256:3983dd7b67297db299b403b29b328d9e03e14c4c590ea90aa1ad1d7b35fb178b"},
+    {file = "Cython-0.29.10-cp27-cp27m-manylinux1_x86_64.whl", hash = "sha256:bfd0db770e8bd4e044e20298dcae6dfc42561f85d17ee546dcd978c8b23066ae"},
+    {file = "Cython-0.29.10-cp27-cp27m-win32.whl", hash = "sha256:e3f1e6224c3407beb1849bdc5ae3150929e593e4cffff6ca41c6ec2b10942c80"},
+    {file = "Cython-0.29.10-cp27-cp27m-win_amd64.whl", hash = "sha256:f37792b16d11606c28e428460bd6a3d14b8917b109e77cdbe4ca78b0b9a52c87"},
+    {file = "Cython-0.29.10-cp27-cp27mu-manylinux1_i686.whl", hash = "sha256:b26071c2313d1880599c69fd831a07b32a8c961ba69d7ccbe5db1cd8d319a4ca"},
+    {file = "Cython-0.29.10-cp27-cp27mu-manylinux1_x86_64.whl", hash = "sha256:4100a3f8e8bbe47d499cdac00e56d5fe750f739701ea52dc049b6c56f5421d97"},
+    {file = "Cython-0.29.10-cp34-cp34m-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl", hash = "sha256:0afa0b121b89de619e71587e25702e2b7068d7da2164c47e6eee80c17823a62f"},
+    {file = "Cython-0.29.10-cp34-cp34m-manylinux1_i686.whl", hash = "sha256:deab85a069397540987082d251e9c89e0e5b2e3e044014344ff81f60e211fc4b"},
+    {file = "Cython-0.29.10-cp34-cp34m-manylinux1_x86_64.whl", hash = "sha256:803987d3b16d55faa997bfc12e8b97f1091f145930dee229b020487aed8a1f44"},
+    {file = "Cython-0.29.10-cp34-cp34m-win32.whl", hash = "sha256:9faea1cca34501c7e139bc7ef8e504d532b77865c58592493e2c154a003b450f"},
+    {file = "Cython-0.29.10-cp34-cp34m-win_amd64.whl", hash = "sha256:da786e039b4ad2bce3d53d4799438cf1f5e01a0108f1b8d78ac08e6627281b1a"},
+    {file = "Cython-0.29.10-cp35-cp35m-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl", hash = "sha256:e74eb224e53aae3943d66e2d29fe42322d5753fd4c0641329bccb7efb3a46552"},
+    {file = "Cython-0.29.10-cp35-cp35m-manylinux1_i686.whl", hash = "sha256:1c608ba76f7a20cc9f0c021b7fe5cb04bc1a70327ae93a9298b1bc3e0edddebe"},
+    {file = "Cython-0.29.10-cp35-cp35m-manylinux1_x86_64.whl", hash = "sha256:c2fad1efae5889925c8fd7867fdd61f59480e4e0b510f9db096c912e884704f1"},
+    {file = "Cython-0.29.10-cp35-cp35m-win32.whl", hash = "sha256:2a9deafa437b6154cac2f25bb88e0bfd075a897c8dc847669d6f478d7e3ee6b1"},
+    {file = "Cython-0.29.10-cp35-cp35m-win_amd64.whl", hash = "sha256:99af5cfcd208c81998dcf44b3ca466dee7e17453cfb50e98b87947c3a86f8753"},
+    {file = "Cython-0.29.10-cp36-cp36m-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl", hash = "sha256:61c24f4554efdb8fb1ac6c8e75dab301bcdf2b7b739ed0c2b267493bb43163c5"},
+    {file = "Cython-0.29.10-cp36-cp36m-manylinux1_i686.whl", hash = "sha256:bd40def0fd013569887008baa6da9ca428e3d7247adeeaeada153006227bb2e7"},
+    {file = "Cython-0.29.10-cp36-cp36m-manylinux1_x86_64.whl", hash = "sha256:51abfaa7b6c66f3f18028876713c8804e73d4c2b6ceddbcbcfa8ec62429377f0"},
+    {file = "Cython-0.29.10-cp36-cp36m-win32.whl", hash = "sha256:2f28396fbce6d9d68a40edbf49a6729cf9d92a4d39ff0f501947a89188e9099f"},
+    {file = "Cython-0.29.10-cp36-cp36m-win_amd64.whl", hash = "sha256:b49dc8e1116abde13a3e6a9eb8da6ab292c5a3325155fb872e39011b110b37e6"},
+    {file = "Cython-0.29.10-cp37-cp37m-macosx_10_6_intel.macosx_10_9_intel.macosx_10_9_x86_64.macosx_10_10_intel.macosx_10_10_x86_64.whl", hash = "sha256:a7ba4c9a174db841cfee9a0b92563862a0301d7ca543334666c7266b541f141a"},
+    {file = "Cython-0.29.10-cp37-cp37m-manylinux1_i686.whl", hash = "sha256:7b41eb2e792822a790cb2a171df49d1a9e0baaa8e81f58077b7380a273b93d5f"},
+    {file = "Cython-0.29.10-cp37-cp37m-manylinux1_x86_64.whl", hash = "sha256:700ccf921b2fdc9b23910e95b5caae4b35767685e0812343fa7172409f1b5830"},
+    {file = "Cython-0.29.10-cp37-cp37m-win32.whl", hash = "sha256:ee697c7ea65cb14915a64f36874da8ffc2123df43cf8bc952172e04a26656cd6"},
+    {file = "Cython-0.29.10-cp37-cp37m-win_amd64.whl", hash = "sha256:fd2906b54cbf879c09d875ad4e4687c58d87f5ed03496063fec1c9065569fd5d"},
+    {file = "Cython-0.29.10.tar.gz", hash = "sha256:26229570d6787ff3caa932fe9d802960f51a89239b990d275ae845405ce43857"},
 ]
 distlib = [
     {file = "distlib-0.3.1-py2.py3-none-any.whl", hash = "sha256:8c09de2c67b3e7deef7184574fc060ab8a793e7adbb183d942c389c8b13c52fb"},
@@ -830,6 +914,10 @@ pbr = [
     {file = "pbr-5.5.0-py2.py3-none-any.whl", hash = "sha256:5adc0f9fc64319d8df5ca1e4e06eea674c26b80e6f00c530b18ce6a6592ead15"},
     {file = "pbr-5.5.0.tar.gz", hash = "sha256:14bfd98f51c78a3dd22a1ef45cf194ad79eee4a19e8e1a0d5c7f8e81ffe182ea"},
 ]
+pexpect = [
+    {file = "pexpect-4.8.0-py2.py3-none-any.whl", hash = "sha256:0b48a55dcb3c05f3329815901ea4fc1537514d6ba867a152b581d69ae3710937"},
+    {file = "pexpect-4.8.0.tar.gz", hash = "sha256:fc65a43959d153d0114afe13997d439c22823a27cefceb5ff35c2178c6784c0c"},
+]
 pillow = [
     {file = "Pillow-7.2.0-cp35-cp35m-macosx_10_10_intel.whl", hash = "sha256:1ca594126d3c4def54babee699c055a913efb01e106c309fa6b04405d474d5ae"},
     {file = "Pillow-7.2.0-cp35-cp35m-manylinux1_i686.whl", hash = "sha256:c92302a33138409e8f1ad16731568c55c9053eee71bb05b6b744067e1b62380f"},
@@ -867,6 +955,10 @@ pluggy = [
 pre-commit = [
     {file = "pre_commit-1.21.0-py2.py3-none-any.whl", hash = "sha256:f92a359477f3252452ae2e8d3029de77aec59415c16ae4189bcfba40b757e029"},
     {file = "pre_commit-1.21.0.tar.gz", hash = "sha256:8f48d8637bdae6fa70cc97db9c1dd5aa7c5c8bf71968932a380628c25978b850"},
+]
+ptyprocess = [
+    {file = "ptyprocess-0.6.0-py2.py3-none-any.whl", hash = "sha256:d7cc528d76e76342423ca640335bd3633420dc1366f258cb31d05e865ef5ca1f"},
+    {file = "ptyprocess-0.6.0.tar.gz", hash = "sha256:923f299cc5ad920c68f2bc0bc98b75b9f838b93b599941a6b63ddbc2476394c0"},
 ]
 py = [
     {file = "py-1.9.0-py2.py3-none-any.whl", hash = "sha256:366389d1db726cd2fcfc79732e75410e5fe4d31db13692115529d34069a043c2"},
@@ -935,6 +1027,10 @@ regex = [
 requests = [
     {file = "requests-2.24.0-py2.py3-none-any.whl", hash = "sha256:fe75cc94a9443b9246fc7049224f75604b113c36acb93f87b80ed42c44cbb898"},
     {file = "requests-2.24.0.tar.gz", hash = "sha256:b3559a131db72c33ee969480840fff4bb6dd111de7dd27c8ee1f820f4f00231b"},
+]
+sh = [
+    {file = "sh-1.14.0-py2.py3-none-any.whl", hash = "sha256:4219d338349581a07cd1358c1d7de0fa57bb5d44e547cc87b0da7d5349705030"},
+    {file = "sh-1.14.0.tar.gz", hash = "sha256:05c7e520cdf70f70a7228a03b589da9f96c6e0d06fc487ab21fc62b26a592e59"},
 ]
 six = [
     {file = "six-1.15.0-py2.py3-none-any.whl", hash = "sha256:8b74bedcbbbaca38ff6d7491d76f2b06b3592611af620f8426e82dddb04a5ced"},

@@ -24,3 +24,7 @@ don't know why.
 [loginit]: https://gitlab.com/advian-oss/python-datastreamcorelib/-/blob/master/src/datastreamcorelib/logging.py#L39
 
 Now there's also asyncio based entrypoint (requires git kivy) `kivysrctestasync`
+
+## buildozer / p4a
+
+Comment out the kivy dep in pyproject.toml.
