@@ -42,11 +42,11 @@ branch = true
 
 [tool.poetry.dependencies]
 python = "^3.7"
-pygame = "^1.9.6"
 kivy = "^1.11.1"
+pysdl2 = "^0.9.7"
+pillow = "^7.2.0"
 # For some reason poetry can't resolve version from here
 #kivy = {git = "https://github.com/kivy/kivy.git", branch = "master"}
-
 
 [tool.poetry.dev-dependencies]
 pytest = "^3.0"
