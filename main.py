@@ -1,5 +1,6 @@
 """buildozer entrypoint"""
 import sys
+import asyncio
 from srctest.app import SrcTestApp
 
 
@@ -10,6 +11,6 @@ if __name__ == "__main__":
     app = SrcTestApp()
 
     print(" *** app run (main.py) ***")
-    exitcode = app.run()
+    exitcode = asyncio.get_event_loop().run_until_complete(app.async_run(async_lib="asyncio"))
     print(" *** app done (main.py) ***")
     sys.exit(exitcode)
