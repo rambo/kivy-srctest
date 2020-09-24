@@ -44,7 +44,6 @@ branch = true
 python = "^3.7"
 # With this dep cython builds fail
 #Cython = "0.29.10"
-Cython = "0.29.21"
 kivy = "^1.11.1"
 pysdl2 = "^0.9.7"
 pillow = "^7.2.0"
@@ -62,6 +61,7 @@ mypy = "^0.750.0"
 pre-commit = "^1.20"
 bump2version = "^0.5.11"
 pytest-asyncio = "^0.10.0"
+Cython = "0.29.21"
 buildozer = {git = "https://github.com/kivy/buildozer.git", branch = "master"}
 
 
