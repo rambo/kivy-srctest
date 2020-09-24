@@ -36,7 +36,7 @@ version = 0.1
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy==2.0.0rc3
+requirements = python3,kivy==2.0.0rc3,setuptools,file:///home/rambo/devel/kivy-srctest/#egg=srctest
 
 
 # (str) Custom source folders for requirements
@@ -302,7 +302,7 @@ log_level = 2
 warn_on_root = 1
 
 # (str) Path to build artifact storage, absolute or relative to spec file
-build_dir = ../kivysrctest_buildozer
+build_dir = ../../kivysrctest_buildozer
 
 # (str) Path to build output (i.e. .apk, .ipa) storage
 # bin_dir = ./bin
